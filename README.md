@@ -18,12 +18,21 @@ employee-web: Frontend module
 ## How to build?
 ```
 # Build project
+
+# TODO: add a root pom.xml to build the following modules in order
+$ cd <ProjectRoot>/employee-entity/
+$ mvn clean install
+
+$ cd <ProjectRoot>/employee-service/
+$ mvn clean install
+
+$ cd <ProjectRoot>/employee-api/
 $ mvn clean install
 
 # deploy generated employee-api.war located in target folder in apache tomcat
 # TODO: add deploy instuctions for REST service
 
 # build and run web service
-$ cd employee-web/
+$ cd <ProjectRoot>/employee-web/
 $ grunt serve
 ```
