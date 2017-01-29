@@ -7,9 +7,13 @@ Frontend developed using Node.js and Angular.js
 
 ## Modules overview
 employee-api: REST API module
+
 employee-entiry: JPA module
+
 employee-service: Core business logic module
+
 employee-web: Frontend module
+
 
 ## How to build?
 ```
