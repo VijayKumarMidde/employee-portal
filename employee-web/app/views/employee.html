@@ -1,0 +1,41 @@
+<div class="modal-header">
+	<h3 class="modal-title">Employee details</h3>
+</div>
+<div class="modal-body">
+	<form name="employeeForm" class="form-horizontal" role="form" novalidate>
+		<div class="row form-group">
+			<label class="col-md-2 control-label">Name</label>
+			<div class="col-md-9">
+				<input ng-model="employee.name" name="name" type="text" class="form-control" required placeholder="Employee Name" ng-maxlength="30"/>
+			</div>
+		</div>
+		<div class="row form-group">
+			<label class="col-md-2 control-label">Email</label>
+			<div class="col-md-9">
+				<input ng-model="employee.email" name="email" type="text" class="form-control" required placeholder="xyz@abc.com" ng-maxlength="30"/>
+			</div>
+		</div>
+		<div class="row form-group">
+			<label class="col-md-2 control-label">Department ID</label>
+			<div class="col-md-9">
+				<input ng-model="employee.department" name="department" type="text" class="form-control" required placeholder="1234"/>
+			</div>
+		</div>
+		<div class="row form-group">
+			<label class="col-md-2 control-label">Designation ID</label>
+			<div class="col-md-9">
+				<input ng-model="employee.designation" name="designation" type="text" class="form-control" required placeholder="1234"/>
+			</div>
+		</div>
+		<div class="row form-group">
+			<label class="col-md-2 control-label">Salary</label>
+			<div class="col-md-9">
+				<input ng-model="employee.salary" name="salary" type="text" class="form-control" required placeholder="1234"/>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-click="add()">Add</button>
+	<button class="btn btn-default" ng-click="cancel()">Cancel</button>
+</div>

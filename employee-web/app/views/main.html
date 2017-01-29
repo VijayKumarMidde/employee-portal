@@ -1,0 +1,47 @@
+<div class="container">
+    <div style="margin-bottom : 10px">
+        <button ng-click="addEmployee()" class="btn btn-primary">Add Employee</button>
+    </div>
+    <table st-table="displayedCollection" st-safe-src="smartTableData" class="table table-hover table-compact table-striped">
+        <th colspan="7">
+            <input st-search="" ng-model="searchKey" class="form-control" placeholder="search ..." type="search" />
+        </th>
+        <thead>
+            <tr>
+                <th st-sort="employeeId">#Id</th>
+                <th st-sort="name">Name</th>
+                <th st-sort="email">e-mail</th>
+                <th st-sort="department">Department ID</th>
+                <th st-sort="designation">Designation ID</th>
+                <th st-sort="salary">Salary</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="employee in displayedCollection">
+                <td>{{ $index + 1 }}</td>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.email }}</td>
+                <td>{{ employee.department }}</td>
+                <td>{{ employee.designation }}</td>
+                <td>{{ employee.salary }}</td>
+                <td>
+                    <div class="btn-group">
+                        <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-wrench"></i>&nbsp;
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li>
+                                <a ng-click="editEmployee(employee)"><i class="fa fa-pencil"></i> Edit</a>
+                            </li>
+                            <li>
+                                <a ng-click="deleteEmployee(employee)"><i class="fa fa-trash-o"></i> Delete</a>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
